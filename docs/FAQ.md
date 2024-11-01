@@ -77,7 +77,7 @@ Some of our team members come from KSP development, and other similar games (suc
     <div class="gray-box">
         <details>
             <summary>Will the Game support Modding?</summary>
-             <p>Yes. It already does.
+             <pre>Yes. It already does.
 The very core game data itself is a mod. Which means that essentially everything we do, can be done as a mod. This includes:
 - C# injection
 - Changing data, such as solar systems and planets
@@ -91,7 +91,7 @@ Early builds will allow us to stress-test our decisions
 early, with modders able to highlight issues with how we structure things. This is important
 to minimize core data structure changes during Alpha and Beta (and beyond), as such 
 changes are enormously frustrating for users and 
-modders at best - and destructive to the community at worst.</p>
+modders at best - and destructive to the community at worst.<pre>
         </details>
     </div>
     <div class="gray-box">
