@@ -1,15 +1,15 @@
 # just-the-docs-template
 
-This is a *bare-minimum* template to create a [Jekyll] site that:
+This is a _bare-minimum_ template to create a [Jekyll] site that:
 
-- uses the [Just the Docs] theme;
-- can be built and published on [GitHub Pages];
-- can be built and previewed locally, and published on other platforms.
+-   uses the [Just the Docs] theme;
+-   can be built and published on [GitHub Pages];
+-   can be built and previewed locally, and published on other platforms.
 
 More specifically, the created site:
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
+-   uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem;
+-   uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages.
 
 To get started with creating a site, simply:
 
@@ -24,8 +24,8 @@ After completing the creation of your new site on GitHub, update it as needed:
 
 Update the following files to your own content:
 
-- `index.md` (your new home page)
-- `README.md` (information for those who access your site repo on GitHub)
+-   `index.md` (your new home page)
+-   `README.md` (information for those who access your site repo on GitHub)
 
 ## Changing the version of the theme and/or Jekyll
 
@@ -35,20 +35,20 @@ Simply edit the relevant line(s) in the `Gemfile`.
 
 The Just the Docs theme automatically includes the [`jekyll-seo-tag`] plugin.
 
-To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.yml`. For example, to add [`jekyll-default-layout`]:
+To add an extra plugin, you need to add it in the `Gemfile` _and_ in `_config.yml`. For example, to add [`jekyll-default-layout`]:
 
-- Add the following to your site's `Gemfile`:
+-   Add the following to your site's `Gemfile`:
 
-  ```ruby
-  gem "jekyll-default-layout"
-  ```
+    ```ruby
+    gem "jekyll-default-layout"
+    ```
 
-- And add the following to your site's `_config.yml`:
+-   And add the following to your site's `_config.yml`:
 
-  ```yaml
-  plugins:
-    - jekyll-default-layout
-  ```
+    ```yaml
+    plugins:
+        - jekyll-default-layout
+    ```
 
 Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
 
@@ -64,14 +64,14 @@ Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key inst
     url: https://YOUR-USERNAME.github.io/YOUR-SITE-NAME
 
     aux_links: # remove if you don't want this link to appear on your pages
-      Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
+        Template Repository: https://github.com/YOUR-USERNAME/YOUR-SITE-NAME
     ```
 
 2.  Push your updated `_config.yml` to your site on GitHub.
 
 3.  In your newly created repo on GitHub:
-    - go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
-    - if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
+    -   go to the `Settings` tab -> `Pages` -> `Build and deployment`, then select `Source`: `GitHub Actions`.
+    -   if there were any failed Actions, go to the `Actions` tab and click on `Re-run jobs`.
 
 ## Building and previewing your site locally
 
@@ -113,10 +113,10 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
 
     ```yaml
     build:
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: docs
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: docs
     ```
 
 2.  Set the `working-directory` param for the Setup Ruby step.
@@ -144,20 +144,25 @@ The GitHub Actions workflow that builds and deploys your site to Github Pages is
 
     ```yaml
     on:
-      push:
-        branches:
-          - "main"
-        paths:
-          - "docs/**"
+        push:
+            branches:
+                - "main"
+            paths:
+                - "docs/**"
     ```
 
 ## Licensing and Attribution
 
-This repository is licensed under the [MIT License]. You are generally free to reuse or extend upon this code as you see fit; just include the original copy of the license (which is preserved when you "make a template"). While it's not necessary, we'd love to hear from you if you do use this template, and how we can improve it for future use!
+This project is available under a dual license:
+
+-   `just-the-docs` portions of the project are licensed under the MIT License (see `LICENSE` for details).
+-   Modifications, enhancements, and new features introduced by the KSA Community Wiki starting on 02/11/2024 are licensed under the GPLv3 (see `LICENSE` for details).
+
+By contributing to this project, you agree that your contributions will be licensed under the GPLv3.
 
 The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party [starter workflows]. A copy of their MIT License is available in [actions/starter-workflows].
 
-----
+---
 
 [^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
