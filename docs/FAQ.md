@@ -12,11 +12,6 @@ nav_order: 1
 </head>
 <body>
     <div class="gray-box">
-        <h1>KSA Community Wiki</h1>
-        <p>Here is the FAQ for new KSA people source: <a href="url">discord.gg/kittenspaceagency</a></p>
-    </div>
-    <br>
-    <div class="gray-box">
         <details>
             <summary>How are Floating-Point Precision issues handled?</summary>
               <p> Most coordinates in games use Vector3 which is a spatial unit made up of three “floats”, which is a 32bit number format. This is useful for most rendering and spatial purposes, a floating-point variable can represent a wider range of numbers than a fixed-point
@@ -121,9 +116,5 @@ BRUTAL is named very deliberately. It is not easy to use, and it does no hand ho
 
 So it is important to clarify, BRUTAL is not a silver bullet. It is simply a tool developed for a very specific purpose - to build games that really scale.</p>  
         </details>
-    </div>
-    <div class="gray-box">
-        <h1>Can't find specific answers?</h1>
-        <p>Join the Offical Discord from the KSA Team. Link: <a href="url">discord.gg/kittenspaceagency</a></p>
     </div>
 </body>
