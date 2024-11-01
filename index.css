@@ -1,0 +1,6 @@
+.gray-box {
+    background-color: rgba(128, 128, 128, 0.5); /* Gray with 50% opacity */
+    border: 1px solid rgba(128, 128, 128, 0.5); /* Gray border with 50% opacity */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
