@@ -1,18 +1,19 @@
 ---
 title: FAQ
 layout: default
+nav_order: 1
 ---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title> KSA Community FAQ <title>
+    <link rel="stylesheet" href="css/box-styles.css">
+    <title>KSA Community FAQ</title>
 </head>
 <body>
     <div class="gray-box">
         <h1>KSA Community Wiki</h1>
-        <p>Here is the FAQ for new KSA people (source: <a href="url">discord.gg/kittenspaceagency</a></p>
+        <p>Here is the FAQ for new KSA people source: <a href="url">discord.gg/kittenspaceagency</a></p>
     </div>
     <br>
     <div class="gray-box">
@@ -27,10 +28,10 @@ Solutions
 
 There are lots of possible approaches. For KSA the main aim is to keep the core architecture as simple as possible. The simulation is powered as much as possible by “doubles”, which are a 64-bit floating-point precision number. Rendering is then done with the camera always at zero, pushing any floating point issues far out to the edges of the camera where they are not perceptible. This approach has been working very well with the KEPLER simulation layer.
 
-Combined with this on the physics level by having different contexts and handling the simulation of those contexts independently, we can avoid having to deal with everything in one “scene”. The key benefit of this context handling is performance but an additional benefit is being able to avoid precision issues with physics handling.<p>
+Combined with this on the physics level by having different contexts and handling the simulation of those contexts independently, we can avoid having to deal with everything in one “scene”. The key benefit of this context handling is performance but an additional benefit is being able to avoid precision issues with physics handling.</p>
         </details>
-  </div>
-      <div class="gray-box">
+    </div>
+    <div class="gray-box">
         <details>
             <summary>How many parts will craft support?</summary>
                 
@@ -47,11 +48,10 @@ A wider topic will cover our various "layers" and groupings in our simulation. I
 
 This requires a much more detailed topic, but "sub part" is a key aspect of the current design. This very much is inspired by mods like Unviersal Storage, together with the technical implementation in AotR and games like Cities Skylines around batch rendering.
 
-This is all a long winded way of saying that in an engine like unity/unreal - a "part" is actually quite a high-cost thing in the games scene. In BRUTAL and KSA, it is simply a C# class that likely has some pointers back to a core template. This drastically reduces the memory cost, the memory churn, and allows us to fine-tune the simulation and rendering approaches.<p>
+This is all a long winded way of saying that in an engine like unity/unreal - a "part" is actually quite a high-cost thing in the games scene. In BRUTAL and KSA, it is simply a C# class that likely has some pointers back to a core template. This drastically reduces the memory cost, the memory churn, and allows us to fine-tune the simulation and rendering approaches.</p>
         </details>
-  </div>
     </div>
-      <div class="gray-box">
+    <div class="gray-box">
         <details>
             <summary>Will Multiplayer be supported??</summary>
                 <p>Yes. But with some key caveats.
@@ -62,11 +62,10 @@ The multiplayer approach is actually a part of BRUTAL that is already battle-tes
 Our studio in general we believe is well placed to make Multiplayers, as it is part of many of the games we have made, and much of our studio has a long history making multiplayer games. 
 
 Such an approach means our proposed multiplayer has limited use cases. It would function similar to games such as Stormworks. While you could run a separate space agency, and your own craft, you would need to agree with the people you are playing when to speed up and when to slow down. So the concession we want to make here has strong impact on multiplayer options. This concession helps a great deal with reducing overall complexity, with both how we synchronize things as well as referencing. We can maintain an absolute state in MP, instead of having to record when and what happened, then reconcile them together. Additionally, beyond the technical issues with "time packets", there are UX/UI issues that we just aren't happy to undertake. Perhaps that is the kind of MP that modders might be able to undertake, where they can hold bigger issues for more niche users. This also ties in with our desire for the base game to have more traditional KSP orbits/scales. While modders can do whatever, at a more KSP scale when operating around kerbin-like planets - time warp changes aren't a huge issue compared to the need for this when using RSS for example, where it takes some time even to reach orbit! 
-One thing that does help with this, though, is that we don't have the same context of locality being required for a vehicle to "do something". Which means active stationkeeping and simulation comes "for free" for vehicles. This means that vehicles can do various things at all time, taking the concepts that mods like Kerbalism started to implement on KSP but expanding that out to the datastructures and simulation "layers" themselves from the ground up. We don't have "unity prefabs" or a "physics SDK" to worry about - so the simulation can be segmented up however we want.<p>  
+One thing that does help with this, though, is that we don't have the same context of locality being required for a vehicle to "do something". Which means active stationkeeping and simulation comes "for free" for vehicles. This means that vehicles can do various things at all time, taking the concepts that mods like Kerbalism started to implement on KSP but expanding that out to the datastructures and simulation "layers" themselves from the ground up. We don't have "unity prefabs" or a "physics SDK" to worry about - so the simulation can be segmented up however we want.</p>  
         </details>
   </div>
-    </div>
-      <div class="gray-box">
+    <div class="gray-box">
         <details>
             <summary>What is the Art Style?</summary>
 <p>This is still somewhat in flux, but somewhere between existing KSP and KSP2. Consistency, performance, and ease of development/modding are the only important aspects for the studio when it comes to the art style.
@@ -74,9 +73,8 @@ We are mostly using PBR for the shader approach, so that allows us to make quite
 
 Some of our team members come from KSP development, and other similar games (such as our own Stationeers), and other games such as ArmA/OFP. We strongly believe in there being technical alignment between the art at the product, which we demonstrated recently in many of our assets for Stationeers - ensuring they were modeled with thought as to their actual real-life counterparts.</p>  
         </details>
-  </div>
     </div>
-      <div class="gray-box">
+    <div class="gray-box">
         <details>
             <summary>Will the Game support Modding?</summary>
              <pre>Yes. It already does.
@@ -95,8 +93,8 @@ to minimize core data structure changes during Alpha and Beta (and beyond), as s
 changes are enormously frustrating for users and 
 modders at best - and destructive to the community at worst.<pre>
         </details>
-  </div>
-        <div class="gray-box">
+    </div>
+    <div class="gray-box">
         <details>
             <summary>What Scale will the Solar System have?</summary>
  <p>The core game data is essentially a mod, so anything we do with the game is open for modders to change. This means our core focus is on providing a base solar system, with ease of use for modders to add their own.
@@ -105,16 +103,14 @@ At this stage our current thinking is basically do do somewhere between current 
 
 We feel like base KSP is a great compromise between many factors when it comes to scale, and so we are not trying to reinvent that - instead focused on solid datastructures and ease of development for modders to fill any gaps.</p>  
         </details>
-  </div>
     </div>
-          <div class="gray-box">
+    <div class="gray-box">
         <details>
             <summary>Will you do N-Body Orbital Simulation?</summary>
  <p>The core focus initially is to provide patchec conics, almost identical to how KSP does it. However, it is possible that if the studio has the right talent (and a team member has the desire) for N-Body to be added as an option. Regardless, the game is being built so a modder could develop a C# mod and add this. Care is being taken to ensure the game is being structured so that if we can't add N-Body physics, someone else could add it.</p>  
         </details>
-  </div>
     </div>
-          <div class="gray-box">
+    <div class="gray-box">
         <details>
             <summary>What Game Engine do you use?</summary>
 <p>We have developed in-house technology we call the "BRUTAL Framework". Instead of an engine, it is more like the XNA Framework developed by Microsoft. BRUTAL allows us to access graphics (and other) API's like Vulkan directly. There is a massive focus on scale, which means a heavy focus on what is called an "interop" layer. This is the layer between which C# (the base language used in our projects using BRUTAL), and C++ which our plugins and APIs like Vulkan run on.
@@ -125,10 +121,9 @@ BRUTAL is named very deliberately. It is not easy to use, and it does no hand ho
 
 So it is important to clarify, BRUTAL is not a silver bullet. It is simply a tool developed for a very specific purpose - to build games that really scale.</p>  
         </details>
-  </div>
     </div>
-    <body>
     <div class="gray-box">
         <h1>Can't find specific answers?</h1>
         <p>Join the Offical Discord from the KSA Team. Link: <a href="url">discord.gg/kittenspaceagency</a></p>
     </div>
+</body>
