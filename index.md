@@ -7,7 +7,7 @@ layout: home_custom
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KSA Community Wiki</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://ksa-community-wiki.github.io/index.css">
 </head>
 <body>
     <div class="gray-box">
