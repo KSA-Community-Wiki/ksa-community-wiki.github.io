@@ -7,7 +7,7 @@ nav_order: 1
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/box-styles.css">
+    <link rel="stylesheet" href="../css/box-styles.css">
     <title>KSA Community FAQ</title>
 </head>
 <body>
@@ -26,6 +26,7 @@ There are lots of possible approaches. For KSA the main aim is to keep the core 
 Combined with this on the physics level by having different contexts and handling the simulation of those contexts independently, we can avoid having to deal with everything in one “scene”. The key benefit of this context handling is performance but an additional benefit is being able to avoid precision issues with physics handling.</p>
         </details>
     </div>
+    <br>
     <div class="gray-box">
         <details>
             <summary>How many parts will craft support?</summary>
@@ -46,6 +47,7 @@ This requires a much more detailed topic, but "sub part" is a key aspect of the 
 This is all a long winded way of saying that in an engine like unity/unreal - a "part" is actually quite a high-cost thing in the games scene. In BRUTAL and KSA, it is simply a C# class that likely has some pointers back to a core template. This drastically reduces the memory cost, the memory churn, and allows us to fine-tune the simulation and rendering approaches.</p>
         </details>
     </div>
+    <br>
     <div class="gray-box">
         <details>
             <summary>Will Multiplayer be supported??</summary>
@@ -59,7 +61,8 @@ Our studio in general we believe is well placed to make Multiplayers, as it is p
 Such an approach means our proposed multiplayer has limited use cases. It would function similar to games such as Stormworks. While you could run a separate space agency, and your own craft, you would need to agree with the people you are playing when to speed up and when to slow down. So the concession we want to make here has strong impact on multiplayer options. This concession helps a great deal with reducing overall complexity, with both how we synchronize things as well as referencing. We can maintain an absolute state in MP, instead of having to record when and what happened, then reconcile them together. Additionally, beyond the technical issues with "time packets", there are UX/UI issues that we just aren't happy to undertake. Perhaps that is the kind of MP that modders might be able to undertake, where they can hold bigger issues for more niche users. This also ties in with our desire for the base game to have more traditional KSP orbits/scales. While modders can do whatever, at a more KSP scale when operating around kerbin-like planets - time warp changes aren't a huge issue compared to the need for this when using RSS for example, where it takes some time even to reach orbit! 
 One thing that does help with this, though, is that we don't have the same context of locality being required for a vehicle to "do something". Which means active stationkeeping and simulation comes "for free" for vehicles. This means that vehicles can do various things at all time, taking the concepts that mods like Kerbalism started to implement on KSP but expanding that out to the datastructures and simulation "layers" themselves from the ground up. We don't have "unity prefabs" or a "physics SDK" to worry about - so the simulation can be segmented up however we want.</p>  
         </details>
-  </div>
+    </div>
+    <br>
     <div class="gray-box">
         <details>
             <summary>What is the Art Style?</summary>
@@ -69,6 +72,7 @@ We are mostly using PBR for the shader approach, so that allows us to make quite
 Some of our team members come from KSP development, and other similar games (such as our own Stationeers), and other games such as ArmA/OFP. We strongly believe in there being technical alignment between the art at the product, which we demonstrated recently in many of our assets for Stationeers - ensuring they were modeled with thought as to their actual real-life counterparts.</p>  
         </details>
     </div>
+    <br>
     <div class="gray-box">
         <details>
             <summary>Will the Game support Modding?</summary>
@@ -89,6 +93,7 @@ changes are enormously frustrating for users and
 modders at best - and destructive to the community at worst.</p>
         </details>
     </div>
+    <br>
     <div class="gray-box">
         <details>
             <summary>What Scale will the Solar System have?</summary>
@@ -99,12 +104,14 @@ At this stage our current thinking is basically do do somewhere between current 
 We feel like base KSP is a great compromise between many factors when it comes to scale, and so we are not trying to reinvent that - instead focused on solid datastructures and ease of development for modders to fill any gaps.</p>  
         </details>
     </div>
+    <br>
     <div class="gray-box">
         <details>
             <summary>Will you do N-Body Orbital Simulation?</summary>
  <p>The core focus initially is to provide patchec conics, almost identical to how KSP does it. However, it is possible that if the studio has the right talent (and a team member has the desire) for N-Body to be added as an option. Regardless, the game is being built so a modder could develop a C# mod and add this. Care is being taken to ensure the game is being structured so that if we can't add N-Body physics, someone else could add it.</p>  
         </details>
     </div>
+    <br>
     <div class="gray-box">
         <details>
             <summary>What Game Engine do you use?</summary>

@@ -1,6 +1,7 @@
 ---
 title: Home
 layout: home_custom
+color_scheme: dark
 ---
 <html lang="en">
 <head>
@@ -28,7 +29,6 @@ layout: home_custom
         <details>
             <summary>KSA Team.</summary>
                 <p>(based on discord names)</p>
-                <br>
                 <p>Rocket - CEO |
                 sknightly - COO |
                 Heightmare - CPO |

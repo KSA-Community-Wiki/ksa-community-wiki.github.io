@@ -1,6 +1,11 @@
 .gray-box {
-    background-color: rgba(128, 128, 128, 0.5); /* Gray with 50% opacity */
-    border: 1px solid rgba(128, 128, 128, 0.5); /* Gray border with 50% opacity */
+    background-color: rgba(49, 52, 54, 0.678);
+    border: 1px solid rgba(128, 128, 128, 0.5);
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
+    color: white; /* Text color */
+}
+
+h1 {
+    color: inherit; /* Inherit the color from the parent element */
 }
