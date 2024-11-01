@@ -21,6 +21,10 @@ layout: home_custom
     </div>
     <br>
     <div class="gray-box">
+        <h1>About KSA.</h1>
+        <p>
+            Kitten Space Agency (KSA) is an upcoming space simulation game developed by RocketWerkz, the studio behind games like Icarus and Stationeers. It's often referred to as a spiritual successor to the popular Kerbal Space Program series.  
+        </p>
         <details>
             <summary>KSA Team.</summary>
                 <p>(based on discord names)</p>
