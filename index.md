@@ -28,6 +28,7 @@ layout: home_custom
         <details>
             <summary>KSA Team.</summary>
                 <p>(based on discord names)</p>
+                <br>
                 <p>Rocket - CEO |
                 sknightly - COO |
                 Heightmare - CPO |
